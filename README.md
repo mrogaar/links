@@ -1,5 +1,20 @@
 # Links
 
+Hoverify browser extension
+
+Hydrogen Pack
+
+https://editorenhancer.com/pricing/
+
+Oxy Toolbox
+
+ACF Tools
+
+WP Gridbuilder
+
+Swiss knife oxygen builder
+
+
 448 hand-picked tools & resources for web designers & developers.
 https://toolkit.addy.codes/
 
