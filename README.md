@@ -23,3 +23,19 @@ WP Gridbuilder
 Swiss knife oxygen builder
 
 https://www.youtube.com/watch?v=hCYJgAVeBN8
+
+
+# Responsive font calc:
+
+https://websemantics.uk/tools/responsive-font-calculator/
+
+Range:
+from
+3 to 4rem
+
+Viewport:
+from 32 to 128rem
+
+HTML {
+  font-size: 62.5%;
+}
