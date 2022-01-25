@@ -29,19 +29,19 @@ https://www.youtube.com/watch?v=hCYJgAVeBN8
 
 ```scss
 // Fluid typography calculator
-// Usage: @include fluid($min, $max)
+// Usage: fluid($min, $max)
 // $min and $max without rem
 // html font size 62.5% 
 $viewportmin: 37.5;
 $viewportmax: 124;
-@mixin fluid($min, $max) {
+@function fluid($min, $max) {
     $minrem: $min * 1rem;
     $maxrem: $max * 1rem;
     $viewportminrem: $viewportmin * 1rem;
     
     $XX: $viewportminrem / 100;
     $YY: 100 * ($max - $min) / ($viewportmax - $viewportmin);
-    font-size: clamp(#{$minrem}, calc(#{$minrem} + ((1vw - #{$XX}) * #{$YY})), #{$maxrem}) !important;
+    @return clamp(#{$minrem}, calc(#{$minrem} + ((1vw - #{$XX}) * #{$YY})), #{$maxrem});
 }
 
 ```
