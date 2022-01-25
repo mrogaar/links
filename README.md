@@ -27,15 +27,21 @@ https://www.youtube.com/watch?v=hCYJgAVeBN8
 
 # Responsive font calc:
 
-https://websemantics.uk/tools/responsive-font-calculator/
-
-Range:
-from
-3 to 4rem
-
-Viewport:
-from 32 to 128rem
-
-HTML {
-  font-size: 62.5%;
+```scss
+// Fluid typography calculator
+// Usage: @include fluid($min, $max)
+// $min and $max without rem
+// html font size 62.5% 
+$viewportmin: 37.5;
+$viewportmax: 124;
+@mixin fluid($min, $max) {
+    $minrem: $min * 1rem;
+    $maxrem: $max * 1rem;
+    $viewportminrem: $viewportmin * 1rem;
+    
+    $XX: $viewportminrem / 100;
+    $YY: 100 * ($max - $min) / ($viewportmax - $viewportmin);
+    font-size: clamp(#{$minrem}, calc(#{$minrem} + ((1vw - #{$XX}) * #{$YY})), #{$maxrem}) !important;
 }
+
+```
